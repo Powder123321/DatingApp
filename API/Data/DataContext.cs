@@ -13,7 +13,8 @@ public class DataContext :DbContext
   }
 public DbSet<AppUser> Users { get; set; }
 
-
-
-
+    internal async Task<AppUser> FindAsync(int id)
+    {
+        throw new NotImplementedException();
+    }
 }
