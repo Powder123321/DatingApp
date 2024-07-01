@@ -5,9 +5,6 @@ using API.Extensions;
 namespace API.Entities;
 
 public class AppUser
-
-
-
 {
     
      public int Id { get; set; }
@@ -44,8 +41,5 @@ public class AppUser
         public int GetAge(){
             return DateOfBirth.CalculateAge();
         }
-
-
-
 }
 

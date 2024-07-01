@@ -25,8 +25,6 @@ _context = context;
             .SingleOrDefaultAsync();
         }
 
-      
-
         public async Task<AppUser> GetUserByIdAsync(int id)
         {
            return await _context.Users.FindAsync(id);
@@ -37,7 +35,7 @@ _context = context;
            return await _context.Users.SingleOrDefaultAsync(x => x.UserName == username);
         }
 
-        public  async Task<IEnumerable<AppUser>> GetUserAsync()
+        public async Task<IEnumerable<AppUser>> GetUserAsync()
         {
            return await _context.Users.Include(x => x.Photos)
            .ToListAsync();

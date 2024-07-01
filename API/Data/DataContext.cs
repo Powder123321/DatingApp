@@ -3,18 +3,18 @@ using Microsoft.EntityFrameworkCore;
 
 namespace API;
 
-public class DataContext :DbContext
+public class DataContext : DbContext
 {
   
 
   public DataContext(DbContextOptions options) :base(options)
   {
-    
+   
   }
-public DbSet<AppUser> Users { get; set; }
+  public DbSet<AppUser> Users { get; set; }
 
-    internal async Task<AppUser> FindAsync(int id)
-    {
-        throw new NotImplementedException();
-    }
+  internal async Task<AppUser> FindAsync(int id)
+  {
+    throw new NotImplementedException();
+  }
 }
